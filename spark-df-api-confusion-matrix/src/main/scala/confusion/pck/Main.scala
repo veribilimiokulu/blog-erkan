@@ -42,7 +42,7 @@ object Main {
 
 
     //Veri setini böl
-    val Array(trainData, testData) = data.randomSplit(Array(0.8, 0.2))
+    val Array(trainData, testData) = data.randomSplit(Array(0.8, 0.2),seed = 142)
 
 
     // Sınıflandırıcı (Karar Ağacı) Oluştur
@@ -97,7 +97,7 @@ object Main {
 
     // Hata Matrisini dataframe ile yazdırma
     val confusionMatrix = trsDF.groupBy("label")
-      .pivot("prediction", (1 to 3))
+      .pivot("prediction", (0 to 2))
       .count().na.fill(0.0).orderBy("label")
       confusionMatrix.show()
 
