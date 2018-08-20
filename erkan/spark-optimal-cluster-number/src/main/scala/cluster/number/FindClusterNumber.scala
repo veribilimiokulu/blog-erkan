@@ -24,7 +24,7 @@ object FindClusterNumber {
     def ComputeKMeansModel(df:DataFrame, k:Int): PipelineModel = {
 
      // Pick up input columns
-      val inputColumns = data.columns.filter(_!="Species")
+      val inputColumns = df.columns.filter(_!="Species")
 
       val vectorAssembler = new VectorAssembler().
         setInputCols(inputColumns).
