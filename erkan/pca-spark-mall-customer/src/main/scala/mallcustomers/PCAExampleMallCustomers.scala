@@ -2,6 +2,7 @@ package mallcustomers
 import org.apache.spark.ml.{PipelineModel, Pipeline}
 import org.apache.spark.ml.feature.{OneHotEncoderEstimator,VectorAssembler, StandardScaler,PCA,PCAModel,StringIndexer}
 import org.apache.spark.sql.{DataFrame, SparkSession}
+import org.apache.spark.ml.clustering.{KMeans, KMeansModel}
 
 object PCAExampleMallCustomers {
   def main(args: Array[String]): Unit = {
@@ -45,13 +46,78 @@ object PCAExampleMallCustomers {
       (pipeline, inputCol + "_indexed")
     }
 
+    /*
 
-    // PCA modelin de içinde olduğu bir pipeline hazırla
-    def DetermineLDANumber(df:DataFrame, k_pca:Int): PipelineModel = {
 
+        // PCA - A Function that computes explained variance
+        def DetermineLDANumber(df:DataFrame, k_pca:Int): PipelineModel = {
+
+          // Preprocessing categorical features
+          val (genderPipeline, gender_indexed) = stringIndexerPipeline("gender")
+
+          // Use StringIndexer output as input for OneHotEncoderEstimator
+          val oneHotEncoder = new OneHotEncoderEstimator()
+            //.setDropLast(true)
+            //.setHandleInvalid("skip")
+            .setInputCols(Array("gender_indexed"))
+            .setOutputCols(Array("gender_indexedVec"))
+
+
+          // Gather features that will be pass through pipeline
+          val OHECols = oneHotEncoder.getOutputCols ++ Array("age","annual_income","spending_score")
+
+          // Put all inputs in a column as a vector
+          val vectorAssembler = new VectorAssembler().
+            setInputCols(OHECols).
+            setOutputCol("featureVector")
+
+          // Scale vector column
+          val standartScaler = new StandardScaler()
+            .setInputCol("featureVector")
+            .setOutputCol("scaledFeatureVector")
+            .setWithStd(true)
+            .setWithMean(false)
+
+          // Create a PCA object
+          val pca = new PCA()
+            .setInputCol("scaledFeatureVector")
+            .setOutputCol("PCAScaledFeatureVector")
+            .setK(k_pca)
+
+          // Create a pipeline and sort estimators
+          val pipeline = new Pipeline().setStages(
+            Array(genderPipeline, oneHotEncoder, vectorAssembler, standartScaler, pca))
+          pipeline.fit(df)
+
+        }
+        //end of function
+
+        // Finding optimal k number
+        val exvar = Array[Double]()
+        for (k_pca <- 2 to 4 by 1) {
+
+          val pipelineModel = DetermineLDANumber(data, k_pca)
+
+          val transformedDF = pipelineModel.transform(data)
+          val pcaModel = pipelineModel.stages.last.asInstanceOf[PCAModel]
+          val explainedVariance = pcaModel.explainedVariance
+          println("k value:" + k_pca, "Explained Variance: " + explainedVariance, explainedVariance.toArray.sum)
+          exvar:+explainedVariance.toArray.sum
+        }
+        //exvar.foreach(println)
+        // We determine the k_pca value as 3
+
+        */
+
+    //Let's continue clustering
+
+    // KMeans Clustering - A Function that computes Kmeans
+    def ComputeKMeansModel(df:DataFrame,  k:Int, k_pca:Int): PipelineModel = {
+
+      // Preprocessing categorical features
       val (genderPipeline, gender_indexed) = stringIndexerPipeline("gender")
 
-      // StringIndexer dan çıkanları OneHotEstimator a sokalım
+      // Use StringIndexer output as input for OneHotEncoderEstimator
       val oneHotEncoder = new OneHotEncoderEstimator()
         //.setDropLast(true)
         //.setHandleInvalid("skip")
@@ -59,52 +125,59 @@ object PCAExampleMallCustomers {
         .setOutputCols(Array("gender_indexedVec"))
 
 
-      // Yukarıda yazdığımız oneHotPipeline() fonksiyonu ile her bir kategorik nitelik için bir pipeline nesnesini ve ilgili
-      // sütun ismini alıp bir değişkende tutalım. Her kategorik nitelik için ayrı ayrı yapıyoruz.
-
-      // Analize girecek sütunları toplayalım
+      // Gather features that will be pass through pipeline
       val OHECols = oneHotEncoder.getOutputCols ++ Array("age","annual_income","spending_score")
 
+      // Put all inputs in a column as a vector
+      val vectorAssembler = new VectorAssembler()
+        .setInputCols(OHECols)
+        .setOutputCol("featureVector")
 
-      // Model için gerekli nitelikleri seçmek:
-      // Orijinal dataframe'den kategorik nitelikleri ve hedef değişken olan label sütununu çıkarıp
-      // yeni oluşturduğumuz vector türündeki isimleri ekliyoruz.
-      // Buradaki hazırlığın amacı vector assembler için vereceğimiz sütun isimlerini bir arada toplamaktır.
-      val vectorAssembler = new VectorAssembler().
-        setInputCols(OHECols).
-        setOutputCol("featureVector")
-
+      // Scale vector column
       val standartScaler = new StandardScaler()
         .setInputCol("featureVector")
         .setOutputCol("scaledFeatureVector")
         .setWithStd(true)
         .setWithMean(false)
 
+      // Create a PCA object
       val pca = new PCA()
         .setInputCol("scaledFeatureVector")
         .setOutputCol("PCAScaledFeatureVector")
         .setK(k_pca)
 
+      val kmeansObject = new KMeans()
+        .setSeed(142)
+        .setK(k)
+        .setPredictionCol("cluster")
+        .setFeaturesCol("PCAScaledFeatureVector")
+        .setMaxIter(40)
+        .setTol(1.0e-5)
+
+      // Create a pipeline and sort estimators
       val pipeline = new Pipeline().setStages(
-        Array(genderPipeline, oneHotEncoder, vectorAssembler, standartScaler, pca))
+        Array(genderPipeline, oneHotEncoder, vectorAssembler, standartScaler, pca, kmeansObject))
       pipeline.fit(df)
 
     }
     //end of function
 
-    // Finding optimal k number
-    val exvar = Array[Double]()
-    for (k_pca <- 2 to 4 by 1) {
+    // Determine optimal k value for KMeans
+    data.cache()
+    import org.apache.spark.ml.evaluation.ClusteringEvaluator
+    val evaluator = new ClusteringEvaluator()
+      .setFeaturesCol("PCAScaledFeatureVector")
+      .setPredictionCol("cluster")
+      .setMetricName("silhouette")
 
-      val pipelineModel = DetermineLDANumber(data, k_pca)
+    for(k <- 2 to 10 by 1){
+      val pipelineModel =  ComputeKMeansModel(data,k,3)
 
       val transformedDF = pipelineModel.transform(data)
-      val pcaModel = pipelineModel.stages.last.asInstanceOf[PCAModel]
-      val explainedVariance = pcaModel.explainedVariance
-      println("k value:" + k_pca, "Explained Variance: " + explainedVariance, explainedVariance.toArray.sum)
-      exvar:+explainedVariance.toArray.sum
-    }
-    exvar.foreach(println)
 
+      val score = evaluator.evaluate(transformedDF)
+      val kmeansModel = pipelineModel.stages.last.asInstanceOf[KMeansModel]
+      println(k,score,kmeansModel.computeCost(transformedDF))
+    }
   }
 }

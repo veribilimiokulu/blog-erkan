@@ -2,21 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13fbba88-f897-4809-abbe-a15ef5d39c2b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../erkan/pca-spark-example/.idea/hydra.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../erkan/pca-spark-example/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../erkan/pca-spark-example/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pca-spark-example/pcaexample/src/main/scala/pcaPck/PCAExampleAdult.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pca-spark-example/pcaexample/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pca-spark-example/pcaexample/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pca-spark-example/pcaexample/pcaexample.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../pca-spark-example/pcaexample/pcaexampleAdult.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pca-spark-example/pcaexample/src/main/scala/pcaPck/PCAExample.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pca-spark-example/pcasparkexample/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pca-spark-example/pcasparkexample/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pca-spark-example/pcasparkexample/.idea/hydra.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pca-spark-example/pcasparkexample/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pca-spark-example/pcasparkexample/.idea/scala_compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pca-spark-example/pcasparkexample/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pca-spark-example/pcasparkexample/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pca-spark-example/pcasparkexample/src/main/scala/pca/spark/scala/example/PCAExample.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/mallcustomers/PCAExampleMallCustomers.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/mallcustomers/PCAExampleMallCustomers.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/mallcustomers/PCAExampleMallCustomers$$anonfun$main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/mallcustomers/PCAExampleMallCustomers$$anonfun$main$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/mallcustomers/PCAExampleMallCustomers$$anonfun$main$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/mallcustomers/PCAExampleMallCustomers$$anonfun$main$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/mallcustomers/PCAExampleMallCustomers$$anonfun$main$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/mallcustomers/PCAExampleMallCustomers$$anonfun$main$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/mallcustomers/PCAExampleMallCustomers$$anonfun$main$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/mallcustomers/PCAExampleMallCustomers$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/mallcustomers/PCAExampleMallCustomers$.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -58,13 +53,33 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-2034017767">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="scala" value="563" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Scala" value="563" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open" />
+      <usages-collector id="statistics.file.types.open" />
+    </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="770">
+            <state relative-caret-position="1037">
               <caret line="61" column="12" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="12" />
             </state>
           </provider>
@@ -73,8 +88,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/mallcustomers/PCAExampleMallCustomers.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1428">
-              <caret line="96" column="24" selection-start-line="96" selection-start-column="24" selection-end-line="96" selection-end-column="24" />
+            <state relative-caret-position="260">
+              <caret line="174" lean-forward="true" selection-start-line="174" selection-end-line="174" />
               <folding>
                 <element signature="e#22#74#0" expanded="true" />
               </folding>
@@ -84,8 +99,13 @@
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>k value</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -116,7 +136,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -142,22 +161,19 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="pcamallcustomer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pca-spark-mall-customer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534705176903" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534742143864" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -173,8 +189,10 @@
   </component>
   <component name="RunManager">
     <configuration name="PCAExampleMallCustomers" type="Application" factoryName="Application" temporary="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="C:\Program Files\Java\jdk1.8.0_171\jre" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="mallcustomers.PCAExampleMallCustomers" />
-      <module name="pca-spark-mall-customer" />
+      <module name="pca-mall-customer" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="mallcustomers.*" />
@@ -215,53 +233,56 @@
   <component name="ToolWindowManager">
     <frame x="345" y="61" width="1473" height="988" extended-state="0" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.57961786" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25336164" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.32982457" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32982457" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33801168" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32982457" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
     <MESSAGE value="First push for pca customer" />
     <option name="LAST_COMMIT_MESSAGE" value="First push for pca customer" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="770">
+        <state relative-caret-position="1037">
           <caret line="61" column="12" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/mallcustomers/PCAExampleMallCustomers.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1428">
-          <caret line="96" column="24" selection-start-line="96" selection-start-column="24" selection-end-line="96" selection-end-column="24" />
+        <state relative-caret-position="260">
+          <caret line="174" lean-forward="true" selection-start-line="174" selection-end-line="174" />
           <folding>
             <element signature="e#22#74#0" expanded="true" />
           </folding>
