@@ -139,6 +139,21 @@ object Main {
     // Now we can determine who is the closest or farthest to cluster center.
     val data7 = data6.withColumn("distance", distanceOfTwoVecs('clusterCenter,'scaledFeatureVector))
     data7.show()
+
+  /******************* FIND Z SCORES FOR OUTLIER SCORE **************/
+    // Determine outlier in each cluster; the farther, the outlier
+    val data8 = data7.groupBy("cluster").agg(stddev('distance).as("clusterStd"),
+      min('distance).as("minOfCluster"), max('distance).as("maxOfCluster"),mean('distance).as("meanOfCluster"))
+    data8.show()
+
+    // join old df with last one. Left join
+    val data9 = data7.join(data8, data7.col("cluster") === data8.col("cluster"), "left")
+      .drop(data8.col("cluster"))
+    data9.show()
+
+    // comute z value for every iris (row) abs((distance - mean))/std
+    val data10 = data9.withColumn("z_score", (abs(('distance - 'meanOfCluster))/'clusterStd))
+    data10.show()
   }
 }
 
