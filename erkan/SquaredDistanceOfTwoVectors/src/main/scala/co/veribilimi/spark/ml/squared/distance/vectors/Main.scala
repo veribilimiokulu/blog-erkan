@@ -154,6 +154,12 @@ object Main {
     // comute z value for every iris (row) abs((distance - mean))/std
     val data10 = data9.withColumn("z_score", (abs(('distance - 'meanOfCluster))/'clusterStd))
     data10.show()
+
+    // Filter out outliers where z_score > 3
+
+    val data11 = data10.withColumn("outlier", (when(col("z_score").gt(3.0),"outlier")
+      .otherwise("normal")))
+    data11.where(col("outlier").equalTo("outlier")).show()
   }
 }
 
