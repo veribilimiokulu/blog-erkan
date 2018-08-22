@@ -155,11 +155,11 @@ object Main {
     val data10 = data9.withColumn("z_score", (abs(('distance - 'meanOfCluster))/'clusterStd))
     data10.show()
 
-    // Filter out outliers where z_score > 3
-
+    // Filter out outliers where z_score > 3. In other words where further than 3 std
     val data11 = data10.withColumn("outlier", (when(col("z_score").gt(3.0),"outlier")
       .otherwise("normal")))
     data11.where(col("outlier").equalTo("outlier")).show()
+
   }
 }
 
