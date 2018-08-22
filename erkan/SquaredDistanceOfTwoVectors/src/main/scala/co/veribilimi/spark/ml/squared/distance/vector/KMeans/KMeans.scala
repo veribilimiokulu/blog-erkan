@@ -127,7 +127,7 @@ object KMeans {
 
     // Create a user defined function which computes distance two vectors
     import org.apache.spark.ml.linalg._
-    val computeDistance = (col1: DenseVector, col2: DenseVector) => {
+    val computeDistance = (col1: Vector, col2: Vector) => {
       var distance = 0.0
       distance = Vectors.sqdist(col1,col2)
       distance
