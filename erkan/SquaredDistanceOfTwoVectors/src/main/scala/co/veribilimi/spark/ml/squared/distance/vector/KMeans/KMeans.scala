@@ -1,4 +1,5 @@
-package co.veribilimi.spark.ml.squared.distance.vectors
+package co.veribilimi.spark.ml.squared.distance.vector.KMeans
+
 import org.apache.spark.ml.{Pipeline, PipelineModel}
 import org.apache.spark.ml.clustering.{KMeans, KMeansModel}
 import org.apache.spark.ml.feature.{StandardScaler, VectorAssembler}
@@ -9,7 +10,7 @@ import org.apache.spark.sql.functions._
 
 
 
-object Main {
+object KMeans {
   def main(args: Array[String]): Unit = {
 
     // create a spark session
