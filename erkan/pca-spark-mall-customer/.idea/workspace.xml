@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13fbba88-f897-4809-abbe-a15ef5d39c2b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/mallcustomers/PCAExampleMallCustomers.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/mallcustomers/PCAExampleMallCustomers.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/mallcustomers/PCAExampleMallCustomers$$anonfun$main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/mallcustomers/PCAExampleMallCustomers$$anonfun$main$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/mallcustomers/PCAExampleMallCustomers$$anonfun$main$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/mallcustomers/PCAExampleMallCustomers$$anonfun$main$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/mallcustomers/PCAExampleMallCustomers$$anonfun$main$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/mallcustomers/PCAExampleMallCustomers$$anonfun$main$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/mallcustomers/PCAExampleMallCustomers$$anonfun$main$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/mallcustomers/PCAExampleMallCustomers$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/mallcustomers/PCAExampleMallCustomers$.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -56,17 +47,21 @@
     <session id="-2034017767">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="scala" value="563" />
+          <entry key="txt" value="112" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+          <entry key="PLAIN_TEXT" value="112" />
           <entry key="Scala" value="563" />
         </counts>
       </usages-collector>
@@ -88,8 +83,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/mallcustomers/PCAExampleMallCustomers.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="174" lean-forward="true" selection-start-line="174" selection-end-line="174" />
+            <state relative-caret-position="549">
+              <caret line="174" selection-start-line="174" selection-end-line="174" />
               <folding>
                 <element signature="e#22#74#0" expanded="true" />
               </folding>
@@ -171,7 +166,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534745128602" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534745169954" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
@@ -227,13 +222,27 @@
       <option name="project" value="LOCAL" />
       <updated>1534705028190</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Find ideal k value for pca model then put pca object into pipline then run&#10;Clustering with pca features">
+      <created>1534745089592</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1534745089592</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Find ideal k value for pca model then put pca object into pipline then run&#10;Clustering with pca features">
+      <created>1534745155309</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1534745155309</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="345" y="61" width="1473" height="988" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25336164" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25690022" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -242,7 +251,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33801168" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33801168" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -269,7 +278,8 @@
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
     <MESSAGE value="First push for pca customer" />
-    <option name="LAST_COMMIT_MESSAGE" value="First push for pca customer" />
+    <MESSAGE value="Find ideal k value for pca model then put pca object into pipline then run&#10;Clustering with pca features" />
+    <option name="LAST_COMMIT_MESSAGE" value="Find ideal k value for pca model then put pca object into pipline then run&#10;Clustering with pca features" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -281,8 +291,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/mallcustomers/PCAExampleMallCustomers.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="174" lean-forward="true" selection-start-line="174" selection-end-line="174" />
+        <state relative-caret-position="549">
+          <caret line="174" selection-start-line="174" selection-end-line="174" />
           <folding>
             <element signature="e#22#74#0" expanded="true" />
           </folding>
