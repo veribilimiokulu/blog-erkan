@@ -13,10 +13,10 @@ object Main {
   def main(args: Array[String]): Unit = {
 
     // create a spark session
-  val spark = SparkSession.builder()
-    .master("local")
-    .appName("vector_distance")
-    .getOrCreate()
+    val spark = SparkSession.builder()
+      .master("local")
+      .appName("vector_distance")
+      .getOrCreate()
 
 
     // load data
@@ -32,12 +32,12 @@ object Main {
       // Pick up input columns (we do it just by excluding target feature)
       val inputColumns = df.columns.filter(_!="Species")
 
-      // create a vectorAssembler put all those input. Creates a new column vector named featureVector
+      // create a vectorAssembler put all those inputs. Creates a new column vector named featureVector
       val vectorAssembler = new VectorAssembler().
         setInputCols(inputColumns).
         setOutputCol("featureVector")
 
-      // create a scaler and scale all inputs. Gets in what vectorAssembler outs and creates new column as vector but scaled one
+      // create a scaler and scale all inputs. Gets in what vectorAssembler outs and creates new column as a vector but scaled one
       // named scaledFeatureVector
       val standartScaler = new StandardScaler()
         .setInputCol("featureVector")
@@ -62,9 +62,11 @@ object Main {
       pipeline.fit(df)
 
     }
-    //end of function
+    //end of the function
 
-    // Finding optimal k number
+    /**** Finding optimal k number *********/
+
+      //Create an evaluator object
     val evaluator = new ClusteringEvaluator()
       .setFeaturesCol("scaledFeatureVector")
       .setPredictionCol("cluster")
@@ -79,31 +81,31 @@ object Main {
       // transform our pipeline model and get new dataframe with new features
       val transformedDF = pipelineModel.transform(data5)
 
-      // get evaluater score as double. the dataframe must have scaledFeatureVector column which we declared while
-      // creating evaluator object
+      // get evaluator score as double. The dataframe must have scaledFeatureVector column which we declared while
+      // creating the evaluator object
       val score = evaluator.evaluate(transformedDF)
       val kmeansModel = pipelineModel.stages.last.asInstanceOf[KMeansModel]
       println("k value:"+k, "Score: "+score, "KMeans ComputeCost: "+ kmeansModel.computeCost(transformedDF))
     }
 
-    // We choose 3 as optimal cluster number
+    // We choose 3 as the optimal cluster number
     val pipelineModel =  ComputeClusteringModel(data5,3)
 
     // Pick up clustering model from pipeline stages. It is one of them. Last one.
     val kmeanModel = pipelineModel.stages.last.asInstanceOf[KMeansModel]
 
-    // transform pipelinemodel and get new computed features like cluster number.
+    // transform pipeline model and get new computed features like cluster number.
     // We can see which iris is located in which cluster
     val transformedDF = pipelineModel.transform(data5)
 
-    // COMPUTE THE DISTENCE OF EACH IRIS FLOWER TOWARDS ITS CLUSTER CENTER EUCLIDIAN DISTANCE
+    /********** COMPUTE THE DISTANCE OF EACH IRIS FLOWER TOWARDS ITS CLUSTER CENTER EUCLIDIAN DISTANCE *********/
 
     // get cluster center from clustering model which is a vector (think it as coordinates)
     val clusterCenters = kmeanModel.clusterCenters
 
     import spark.implicits._
 
-    // we match cluster centers with it's cluster number.
+    // we match cluster centers with its cluster number.
     val vec = clusterCenters.zipWithIndex
 
     // array to seq
@@ -115,14 +117,14 @@ object Main {
     //check df if it is ok
     seqDF.show()
 
-    // join newly created cluster center and cluster number dataframe with the transformed one from original.
+    // join newly created cluster center and cluster number dataframe with the transformed one from the original.
     // be aware you must use left join. transformed (big one) must be on the left
     val data6 = transformedDF.join(seqDF, transformedDF("cluster") === seqDF("_2"), "left")
       .withColumnRenamed("_1","clusterCenter")
-        .drop("_2")
+      .drop("_2")
 
 
-    // Create a usr defined function which computes distance two vectors
+    // Create a user defined function which computes distance two vectors
     import org.apache.spark.ml.linalg._
     val computeDistance = (col1: DenseVector, col2: DenseVector) => {
       var distance = 0.0
@@ -133,9 +135,10 @@ object Main {
     // register the udf
     val distanceOfTwoVecs = udf(computeDistance)
 
-    // create new column which consists of computed distances. Now we have distances of each iris to its cluster center.
+    // Create a new column which consists of computed distances. Now we have distances of each iris to its cluster center.
     // Now we can determine who is the closest or farthest to cluster center.
     val data7 = data6.withColumn("distance", distanceOfTwoVecs('clusterCenter,'scaledFeatureVector))
-   data7.show()
+    data7.show()
   }
 }
+
