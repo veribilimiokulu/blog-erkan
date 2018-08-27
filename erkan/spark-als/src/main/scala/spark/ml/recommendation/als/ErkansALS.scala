@@ -19,8 +19,8 @@ object ErkansALS {
   val spark = SparkSession.builder()
     .master("local[4]")
     .appName("SparkALS")
-    .config("spark.executor.extraJavaOptions","-Xss4g")
-    .config("driver-java-options","-Xss4g")
+    //.config("spark.executor.extraJavaOptions","-Xss4g")
+    //.config("driver-java-options","-Xss4g")
     .getOrCreate()
 
     val movieRatings = spark.read.format("csv")
@@ -49,34 +49,34 @@ training.cache()
       .setColdStartStrategy("drop")
       .setNonnegative(true)
 
-/*
+
     // Tune model using ParamGridBuilder
     val paramGridObject = new ParamGridBuilder()
       .addGrid(alsObject.rank, Array(14))
       .addGrid(alsObject.maxIter, Array(20))
       .addGrid(alsObject.regParam, Array(.19))
       .build()
-*/
+
     // Define evaluator as RMSE
     val evaluator = new RegressionEvaluator()
       .setMetricName("rmse")
       .setLabelCol("rating")
       .setPredictionCol("prediction")
-/*
+
     // Build cross validation using TrainValidationSplit
     val tvs = new TrainValidationSplit()
       .setEstimator(alsObject)
       .setEstimatorParamMaps(paramGridObject)
       .setEvaluator(evaluator)
-*/
+
     // Fit ALS model to training set
-    val model = alsObject.fit(training)
+    val model = tvs.fit(training)
 
         // Take best model
-        //val bestModel = model.bestModel
+    val bestModel = model.bestModel
 
         // Generate predictions and evaluate RMSE
-        val predictions = model.transform(test)
+        val predictions = bestModel.transform(test)
         val rmse = evaluator.evaluate(predictions)
 
         predictions.show()
