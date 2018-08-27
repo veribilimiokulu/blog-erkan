@@ -8,17 +8,19 @@ import org.apache.spark.{SparkConf, SparkContext}
 
 object ErkansALS {
   def main(args: Array[String]): Unit = {
-/*
-   val sparkConf = new SparkConf()
 
+  /* val sparkConf = new SparkConf()
+     .setMaster("local[*]")
+     .setAppName("SparkALS")
      .setExecutorEnv("spark.driver.memory","4g")
-     .setExecutorEnv("spark.executor.memory","8g")
+     .setExecutorEnv("spark.executor.memory","10g")
      .setExecutorEnv("spark.sql.broadcastTimeout","1200")
-     .setExecutorEnv("spark.eventLog.enabled","false")
 */
   val spark = SparkSession.builder()
-    .master("local[*]")
+    .master("local[4]")
     .appName("SparkALS")
+    .config("spark.executor.extraJavaOptions","-Xss4g")
+    .config("driver-java-options","-Xss4g")
     .getOrCreate()
 
     val movieRatings = spark.read.format("csv")
@@ -69,10 +71,10 @@ training.cache()
 */
     // Fit ALS model to training set
     val model = alsObject.fit(training)
-/*
+
         // Take best model
-        val bestModel = model.bestModel
-*/
+        //val bestModel = model.bestModel
+
         // Generate predictions and evaluate RMSE
         val predictions = model.transform(test)
         val rmse = evaluator.evaluate(predictions)
