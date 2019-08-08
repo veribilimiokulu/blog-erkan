@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd009ce2-1a96-443a-94d1-d0dbb830a0b7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/co/veribilimi/spark/breeze/linalg/BreezeLinalgExamples.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/co/veribilimi/spark/mahalanobis/SparkMahalanobis.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/co/veribilimi/spark/mahalanobis/SparkMahalanobis.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/co/veribilimi/spark/mahalanobis/WithSparkVectors.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../readParquet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../readParquet/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-mahalanobis-distance.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/co/veribilimi/spark/mahalanobis/SparkMahalanobisWithVectors.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/co/veribilimi/spark/mahalanobis/SparkMahalanobisWithVectors.scala" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -12,40 +15,6 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-1807055785">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.0" value="2" />
-          <entry key="project.open.time.10" value="1" />
-          <entry key="project.opened" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="scala" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="Scala" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="scala" value="4045" />
-          <entry key="txt" value="9" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="PLAIN_TEXT" value="9" />
-          <entry key="Scala" value="4045" />
-        </counts>
-      </usages-collector>
-    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -58,28 +27,38 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/co/veribilimi/spark/mahalanobis/SparkMahalanobis.scala">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/co/veribilimi/spark/mahalanobis/SparkMahalanobisWithVectors.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+            <state relative-caret-position="340">
+              <caret line="62" column="34" lean-forward="true" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
+              <folding>
+                <element signature="e#40#100#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/co/veribilimi/spark/breeze/linalg/BreezeLinalgExamples.scala">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/co/veribilimi/spark/mahalanobis/WithSparkVectors.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="110" column="39" selection-start-line="110" selection-start-column="39" selection-end-line="110" selection-end-column="39" />
+            <state relative-caret-position="1173">
+              <caret line="76" column="50" selection-start-line="76" selection-start-column="50" selection-end-line="76" selection-end-column="50" />
               <folding>
-                <element signature="e#2437#2472#0" expanded="true" />
+                <element signature="e#41#153#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Package Object" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -89,7 +68,14 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/scala/co/veribilimi/spark/mahalanobis/SparkMahalanobis.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/co/veribilimi/spark/mahalanobis/SparkMahalanobisWithArrays.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/co/veribilimi/spark/mahalanobis/MyDailyHacksMahalanobis.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/co/veribilimi/spark/breeze/linalg/BreezeLinalgExamples.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/co/veribilimi/spark/densevectorToRDD/SparkDenseVectorToRDD.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/co/veribilimi/spark/dataframeToMatrix/DtataframeToMatrix.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/co/veribilimi/spark/dataframeToMatrix/DataframeToMatrix.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/co/veribilimi/spark/mahalanobis/SparkMahalanobisWithVectors.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/co/veribilimi/spark/mahalanobis/WithSparkVectors.scala" />
       </list>
     </option>
   </component>
@@ -101,19 +87,21 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="602" />
-    <option name="y" value="36" />
-    <option name="width" value="1197" />
-    <option name="height" value="988" />
+    <option name="x" value="134" />
+    <option name="y" value="2" />
+    <option name="width" value="1822" />
+    <option name="height" value="1047" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -154,23 +142,17 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
               <item name="spark" type="462c0819:PsiDirectoryNode" />
-              <item name="linalg" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sparkmahalanobisdistance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spark-mahalanobis-distance" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="mahalanobis" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535395151017" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561153444491" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -184,7 +166,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.BreezeLinalgExamples">
+  <component name="RunManager" selected="Application.SparkMahalanobisWithVectors">
     <configuration name="BreezeLinalgExamples" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="co.veribilimi.spark.breeze.linalg.BreezeLinalgExamples" />
       <module name="spark-mahalanobis-distance" />
@@ -198,8 +180,47 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SparkMahalanobis" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="co.veribilimi.spark.mahalanobis.SparkMahalanobis" />
+    <configuration name="DtataframeToMatrix" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="co.veribilimi.spark.dataframeToMatrix.DataframeToMatrix" />
+      <module name="spark-mahalanobis-distance" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="co.veribilimi.spark.dataframeToMatrix.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SparkDenseVectorToRDD" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="co.veribilimi.spark.densevectorToRDD.SparkDenseVectorToRDD" />
+      <module name="spark-mahalanobis-distance" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="co.veribilimi.spark.densevectorToRDD.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SparkMahalanobisWithVectors" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="co.veribilimi.spark.mahalanobis.SparkMahalanobisWithVectors" />
+      <module name="spark-mahalanobis-distance" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="co.veribilimi.spark.mahalanobis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WithSparkVectors" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="co.veribilimi.spark.mahalanobis.WithSparkVectors" />
       <module name="spark-mahalanobis-distance" />
       <extension name="coverage">
         <pattern>
@@ -212,13 +233,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.SparkMahalanobis" />
       <item itemvalue="Application.BreezeLinalgExamples" />
+      <item itemvalue="Application.DtataframeToMatrix" />
+      <item itemvalue="Application.SparkDenseVectorToRDD" />
+      <item itemvalue="Application.SparkMahalanobisWithVectors" />
+      <item itemvalue="Application.WithSparkVectors" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SparkMahalanobisWithVectors" />
+        <item itemvalue="Application.WithSparkVectors" />
+        <item itemvalue="Application.DtataframeToMatrix" />
+        <item itemvalue="Application.SparkDenseVectorToRDD" />
         <item itemvalue="Application.BreezeLinalgExamples" />
-        <item itemvalue="Application.SparkMahalanobis" />
       </list>
     </recent_temporary>
   </component>
@@ -240,14 +267,35 @@
       <option name="project" value="LOCAL" />
       <updated>1535362211023</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="2. commit">
+      <created>1535395163640</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1535395163640</updated>
+    </task>
+    <task id="LOCAL-00003" summary="2. commit Breezelinalg examples added, MD with Spark dataframe is experienced">
+      <created>1535449729987</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1535449729987</updated>
+    </task>
+    <task id="LOCAL-00004" summary="3. commit desevectorToRDD package is added">
+      <created>1535479417745</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1535479417745</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="89" y="27" width="1197" height="988" extended-state="0" />
+    <frame x="134" y="2" width="1822" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21459982" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.39273554" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -256,7 +304,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.40818712" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.38293216" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -264,7 +312,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32982457" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32932165" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -273,16 +321,59 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="right" id="Maven" order="8" />
     </layout>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1. commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. commit" />
+    <MESSAGE value="2. commit" />
+    <MESSAGE value="2. commit Breezelinalg examples added, MD with Spark dataframe is experienced" />
+    <MESSAGE value="3. commit desevectorToRDD package is added" />
+    <option name="LAST_COMMIT_MESSAGE" value="3. commit desevectorToRDD package is added" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/co/veribilimi/spark/mahalanobis/SparkMahalanobisWithArrays.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="82" column="7" selection-start-line="82" selection-start-column="7" selection-end-line="82" selection-end-column="7" />
+          <folding>
+            <element signature="e#41#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/co/veribilimi/spark/mahalanobis/package.scala" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/co/veribilimi/spark/mahalanobis/MyDailyHacksMahalanobis.scala" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/co/veribilimi/spark/densevectorToRDD/SparkDenseVectorToRDD.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="4" column="40" selection-start-line="2" selection-end-line="4" selection-end-column="40" />
+          <folding>
+            <element signature="e#46#146#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/co/veribilimi/spark/breeze/linalg/BreezeLinalgExamples.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2635">
+          <caret line="158" selection-start-line="158" selection-end-line="158" />
+          <folding>
+            <element signature="e#43#93#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/co/veribilimi/spark/dataframeToMatrix/DataframeToMatrix.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
+          <folding>
+            <element signature="e#47#147#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1054">
@@ -290,19 +381,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/co/veribilimi/spark/mahalanobis/SparkMahalanobis.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/co/veribilimi/spark/mahalanobis/WithSparkVectors.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        <state relative-caret-position="1173">
+          <caret line="76" column="50" selection-start-line="76" selection-start-column="50" selection-end-line="76" selection-end-column="50" />
+          <folding>
+            <element signature="e#41#153#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/co/veribilimi/spark/breeze/linalg/BreezeLinalgExamples.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/co/veribilimi/spark/mahalanobis/SparkMahalanobisWithVectors.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="110" column="39" selection-start-line="110" selection-start-column="39" selection-end-line="110" selection-end-column="39" />
+        <state relative-caret-position="340">
+          <caret line="62" column="34" lean-forward="true" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
           <folding>
-            <element signature="e#2437#2472#0" expanded="true" />
+            <element signature="e#40#100#0" expanded="true" />
           </folding>
         </state>
       </provider>

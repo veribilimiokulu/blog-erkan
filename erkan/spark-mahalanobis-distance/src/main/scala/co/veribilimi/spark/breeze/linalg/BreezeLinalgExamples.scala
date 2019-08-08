@@ -1,6 +1,8 @@
 package co.veribilimi.spark.breeze.linalg
 
 import breeze.linalg.{*, DenseMatrix, DenseVector}
+import breeze.numerics.{exp, log}
+import org.apache.spark.sql.SparkSession
 
 object BreezeLinalgExamples {
   def main(args: Array[String]): Unit = {
@@ -37,7 +39,7 @@ object BreezeLinalgExamples {
 
     /****************** DENSE MATRIX   **************************/
 
-  val zeroMatrix = DenseMatrix.zeros[Int](5,5)
+    val zeroMatrix = DenseMatrix.zeros[Int](5,5)
     println(zeroMatrix)
 
     // Reach matrix elements
@@ -58,7 +60,7 @@ object BreezeLinalgExamples {
     zeroMatrix(4,::) := DenseVector(1,2,3,4,5).t // transpose to match row shape
     println(zeroMatrix)
 
-  zeroMatrix(0 to 1, 0 to 1) := DenseMatrix((3,1),(-1,-2))
+    zeroMatrix(0 to 1, 0 to 1) := DenseMatrix((3,1),(-1,-2))
     println("zeroMatrix after slice add: \n", zeroMatrix)
 
 
@@ -66,7 +68,7 @@ object BreezeLinalgExamples {
 
     // Broadcasting
 
-  import breeze.stats.mean
+    import breeze.stats.mean
 
     val dm = DenseMatrix((1.0,2.0,3.0),
                           (4.0,5.0,6.0))
@@ -75,7 +77,7 @@ object BreezeLinalgExamples {
     // add each row element following vector elements
     val res = dm(::, *) + DenseVector(3.0, 4.0)
 
-  println("res: ", res)
+    println("res: ", res)
 
     // Add each row the same value
     res(::,*) := DenseVector(3.0, 4.0)
@@ -108,11 +110,54 @@ object BreezeLinalgExamples {
 
     println("poi.mean: ", poi.mean, "  poi.variance: ", poi.variance)
 
-  val normalDist = new Gaussian(3.0,3.0)
+    val normalDist = new Gaussian(3.0,3.0)
     val r = normalDist.sample(5)
     println("r from normal distribution", r)
-println("mean of r ", mean(r))
+    println("mean of r ", mean(r))
     println("normalDist mean: ", normalDist.mean, " normalDist var: ", normalDist.variance,
     "  normalDist std: ", math.sqrt(normalDist.variance))
+
+
+    // EXPONENTIAL DISTRIBUTION
+    val expo = new Exponential(0.5);
+    println("expo.rate: ",expo.rate)
+
+    println("expo.probability: ", expo.probability(0, log(2) * expo.rate))
+    println("expo.prob2: ", expo.probability(0.0, 1.5))
+
+    println(1 - exp(-3.0))
+
+    val samples = expo.sample(2).sorted;
+    println("samples: ", samples)
+
+    println(expo.probability(samples(0), samples(1)))
+
+    println(breeze.stats.meanAndVariance(expo.samples.take(1000)))
+
+    println((1 / expo.rate, 1 / (expo.rate * expo.rate)))
+
+
+
+    def diffOfTwoVecs(x:DenseVector[Double], y:DenseVector[Double]):DenseVector[Double]={
+      val outputVec = DenseVector.zeros[Double](x.length)
+      for(i <- 0 to (x.length-1)){
+        outputVec(i) = x(i) - y(i)
+      }
+      outputVec
+    }
+
+    val vec1 = DenseVector(1.0,2.0,3.0)
+    val vec2 = DenseVector(1.1,2.2,3.3)
+
+    println("Difference of two vector: " + diffOfTwoVecs(vec1,vec2))
+
+
+    /************************* DENEME TAHTASI  ***********************/
+
+
+
+
+
+
   }
 }
