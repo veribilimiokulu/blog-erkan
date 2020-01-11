@@ -66,6 +66,7 @@ object SparkESIntegrationBatch extends App {
 
 
   // Write to ES
+  /*
   df4.write
     .format("org.elasticsearch.spark.sql")
     .mode("overwrite")
@@ -73,6 +74,13 @@ object SparkESIntegrationBatch extends App {
     .option("es.port","9200")
     .save("housing")
 
+   */
 
+  val dfFromES = spark.read.format("org.elasticsearch.spark.sql")
+    .option("es.nodes", "cloudera")
+    .option("es.port","9200")
+    .load("housing")
+
+  dfFromES.show(5)
 
 }

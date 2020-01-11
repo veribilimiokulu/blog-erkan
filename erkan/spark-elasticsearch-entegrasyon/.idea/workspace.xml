@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3545b0d0-e06d-446c-b6c2-d99eaf07db45" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/com/vbo/SparkESIntegrationBatch.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/com/vbo/SparkESIntegrationBatch.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/vbo/SparkESIntegrationBatch$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/vbo/SparkESIntegrationBatch$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/vbo/SparkESIntegrationBatch.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/vbo/SparkESIntegrationBatch.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="D:\egitim\verilen\vbo_blog\erkan\spark-elasticsearch-entegrasyon\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1WBd7hZCB0nJEQ2Zp4ihsXxDEyY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RunManager">
+    <configuration name="SparkESIntegrationBatch" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.vbo.SparkESIntegrationBatch" />
+      <module name="spark-elasticsearch-entegrasyon" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.vbo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SparkESIntegrationBatch" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$USER_HOME$/Desktop/mert" value="PREVIEW" />
+        <entry key="$USER_HOME$/Google Drive/Makaleler/Detection Unusual Healhtcare Expenses Using Machine Learning on Big Data/codes" value="PREVIEW" />
+        <entry key="D:/OneDrive/egitim/alinan/github/spark-lof" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../../alinan/github/spark-structured-streaming/twitter" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../../kendi_denemelerim/spark-lof" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3545b0d0-e06d-446c-b6c2-d99eaf07db45" name="Default Changelist" comment="" />
+      <created>1578626755031</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578626755031</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="110" y="207" key="#Notifications" timestamp="1578627172453">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="110" y="207" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1578627172453" />
+    <state x="393" y="239" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1578626848045">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="393" y="239" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1578626848045" />
+    <state x="375" y="133" key="CommitChangelistDialog2" timestamp="1578736209032">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="375" y="133" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1578736209032" />
+    <state width="1465" height="360" key="GridCell.Tab.0.bottom" timestamp="1578736209050">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1465" height="360" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1578736209050" />
+    <state width="1465" height="360" key="GridCell.Tab.0.center" timestamp="1578736209050">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1465" height="360" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1578736209050" />
+    <state width="1465" height="360" key="GridCell.Tab.0.left" timestamp="1578736209050">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1465" height="360" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1578736209050" />
+    <state width="1465" height="360" key="GridCell.Tab.0.right" timestamp="1578736209050">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1465" height="360" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1578736209050" />
+    <state x="351" y="251" key="run.anything.popup" timestamp="1578707579842">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="351" y="251" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1578707579842" />
+  </component>
+</project>
