@@ -1,7 +1,6 @@
 package com.veribilimiokulu
 
 import org.apache.spark.sql.{SparkSession}
-import org.apache.spark.sql.{functions => F}
 import org.apache.log4j.{Logger, Level}
 import org.apache.spark.sql.{functions => F}
 import org.apache.spark.SparkConf
@@ -14,23 +13,27 @@ object DilisimBlogSparkKaynakTahsisi extends App {
   // Bütün hatalar ayıklandıktan sonra ERROR'a getirilir
 
   val sparkConf = new SparkConf()
-    .setMaster("yarn")
     .setAppName("DilisimBlogSparkKaynakTahsisi")
-    .set("spark.executor.memory","1500M")
-    .set("spark.executor.cores","1")
-    .set("spark.executor.instances","8")
+
+    //.setMaster("yarn")
+
+    //.set("spark.executor.memory","1500M")
+    //.set("spark.executor.cores","2")
+    //.set("spark.executor.instances","8")
 
     // HDFS konfigürasyonundan "fs.defaultFS" ile aranır. Sunucu adresi HDFS -> Instances -> NameNode'dan öğrenilir.
-    .set("spark.hadoop.fs.defaultFS","hdfs://cdh1.impektra.com:8020")
+    //.set("spark.hadoop.fs.defaultFS","hdfs://cdh1.impektra.com:8020")
 
     // YARN konfigürasyonundan "resourcemanager.address" aranır. Sunucu adresi YARN -> Instances -> ResourceManager'dan öğrenilir.
-    .set("spark.hadoop.yarn.resourcemanager.address","cdh2.impektra.com:8032")
+    //.set("spark.hadoop.yarn.resourcemanager.address","cdh2.impektra.com:8032")
 
     // YARN konfigürasyonundan "scheduler.address" aranır. Sunucu adresi YARN -> Instances -> ResourceManager'dan öğrenilir.
-    .set("spark.hadoop.yarn.resourcemanager.scheduler.address","cdh2.impektra.com:8030")
+    //.set("spark.hadoop.yarn.resourcemanager.scheduler.address","cdh2.impektra.com:8030")
 
     // HDFS -> Instances -> NameNode'dan öğrenilir.
-    .set("spark.yarn.jars","hdfs://cdh1.impektra.com:8020/tmp/spark_jars/*.jar")
+    //.set("spark.yarn.jars","hdfs://cdh1.impektra.com:8020/tmp/spark_jars/*.jar")
+
+
 
 
   val spark = SparkSession.builder()
@@ -44,13 +47,13 @@ println(spark.version)
     .option("header",true)
     .option("inferSchema", true)
     .option("sep",",")
-    .load("/user/user/vehicle_collisions_nypd.csv")//.repartition(40)
+    .load("/user/user/vehicle_collisions_nypd.csv")//.repartition(4)
 
-  println("partitionSize: ", df.rdd.partitions.size)
-  println("partitionSize: ", df.rdd.getNumPartitions)
+  println("partitionSize: " + df.rdd.partitions.size)
+  println("partitionSize: " + df.rdd.getNumPartitions)
   df.show()
 
-  println(df.count())
+  println("df.count: " + df.count())
 
   df.groupBy(F.col("BOROUGH")).agg(F.countDistinct("ZIP CODE")).show()
 
@@ -65,6 +68,6 @@ println(spark.version)
 
   val endTime = System.currentTimeMillis()
   println("endTime", endTime)
-  println(endTime - startTime)
+  println("Total time: " + (endTime - startTime))
 
 }

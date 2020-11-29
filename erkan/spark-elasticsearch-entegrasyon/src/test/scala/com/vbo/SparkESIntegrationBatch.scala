@@ -76,6 +76,7 @@ object SparkESIntegrationBatch extends App {
 
    */
 
+  // Read what you have written from ES
   val dfFromES = spark.read.format("org.elasticsearch.spark.sql")
     .option("es.nodes", "cloudera")
     .option("es.port","9200")

@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3545b0d0-e06d-446c-b6c2-d99eaf07db45" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="3545b0d0-e06d-446c-b6c2-d99eaf07db45" name="Default Changelist" comment="Spark ES veri okuma eklendi">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/scala/com/vbo/SparkESIntegrationBatch.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/com/vbo/SparkESIntegrationBatch.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/vbo/SparkESIntegrationBatch$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/vbo/SparkESIntegrationBatch$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/vbo/SparkESIntegrationBatch.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/vbo/SparkESIntegrationBatch.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +101,10 @@
     </task>
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Spark ES veri okuma eklendi" />
+    <option name="LAST_COMMIT_MESSAGE" value="Spark ES veri okuma eklendi" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="110" y="207" key="#Notifications" timestamp="1578627172453">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -116,22 +118,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="375" y="133" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1578736209032" />
-    <state width="1465" height="360" key="GridCell.Tab.0.bottom" timestamp="1578736209050">
+    <state width="1465" height="360" key="GridCell.Tab.0.bottom" timestamp="1578762583614">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1465" height="360" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1578736209050" />
-    <state width="1465" height="360" key="GridCell.Tab.0.center" timestamp="1578736209050">
+    <state width="1465" height="360" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1578762583614" />
+    <state width="1465" height="360" key="GridCell.Tab.0.center" timestamp="1578762583614">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1465" height="360" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1578736209050" />
-    <state width="1465" height="360" key="GridCell.Tab.0.left" timestamp="1578736209050">
+    <state width="1465" height="360" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1578762583614" />
+    <state width="1465" height="360" key="GridCell.Tab.0.left" timestamp="1578762583614">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1465" height="360" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1578736209050" />
-    <state width="1465" height="360" key="GridCell.Tab.0.right" timestamp="1578736209050">
+    <state width="1465" height="360" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1578762583614" />
+    <state width="1465" height="360" key="GridCell.Tab.0.right" timestamp="1578762583614">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1465" height="360" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1578736209050" />
+    <state width="1465" height="360" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1578762583614" />
     <state x="351" y="251" key="run.anything.popup" timestamp="1578707579842">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
