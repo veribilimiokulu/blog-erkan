@@ -5,7 +5,7 @@ import org.apache.log4j.{Logger, Level}
 import org.apache.spark.sql.{functions => F}
 import org.apache.spark.SparkConf
 
-object DilisimBlogSparkKaynakTahsisi extends App {
+object SparkDynamicAllocation extends App {
 
   val startTime = System.currentTimeMillis()
   println("startTime", startTime)
@@ -13,7 +13,7 @@ object DilisimBlogSparkKaynakTahsisi extends App {
   // Bütün hatalar ayıklandıktan sonra ERROR'a getirilir
 
   val sparkConf = new SparkConf()
-    .setAppName("DilisimBlogSparkKaynakTahsisi")
+    .setAppName("SparkDynamicAllocation")
 
     //.setMaster("yarn")
 

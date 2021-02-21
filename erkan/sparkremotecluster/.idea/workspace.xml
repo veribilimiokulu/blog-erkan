@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5586b645-f22f-4c1f-9393-816c02ea48a5" name="Default Changelist" comment="Dilişim blog Spark kaynak tahsisi yazısı kodları eklendi">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spark-elasticsearch-entegrasyon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spark-elasticsearch-entegrasyon/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spark-elasticsearch-entegrasyon/src/test/scala/com/vbo/SparkESIntegrationBatch.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../spark-elasticsearch-entegrasyon/src/test/scala/com/vbo/SparkESIntegrationBatch.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/veribilimiokulu/DilisimBlogSparkKaynakTahsisi.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/veribilimiokulu/DilisimBlogSparkKaynakTahsisi.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/veribilimiokulu/Uygulama_log_ornek" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/veribilimiokulu/DilisimBlogSparkKaynakTahsisi.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/veribilimiokulu/SparkDynamicAllocation.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/veribilimiokulu/DilisimBlogSparkKaynakTahsisi$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/veribilimiokulu/DilisimBlogSparkKaynakTahsisi$delayedInit$body.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/veribilimiokulu/DilisimBlogSparkKaynakTahsisi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spark-remote-cluster-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/spark-remote-cluster-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,26 +143,34 @@
     <option name="LAST_COMMIT_MESSAGE" value="Dilişim blog Spark kaynak tahsisi yazısı kodları eklendi" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="383" y="215" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607977200591">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="383" y="215" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607977200591" />
+    <state x="658" y="344" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1607977199590">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="658" y="344" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607977199590" />
     <state x="530" y="249" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1602330329232">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="530" y="249" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602330329232" />
-    <state width="1184" height="248" key="GridCell.Tab.0.bottom" timestamp="1597089244722">
+    <state width="1448" height="229" key="GridCell.Tab.0.bottom" timestamp="1607977223966">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1184" height="248" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597089244722" />
-    <state width="1184" height="248" key="GridCell.Tab.0.center" timestamp="1597089244722">
+    <state width="1448" height="229" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607977223966" />
+    <state width="1448" height="229" key="GridCell.Tab.0.center" timestamp="1607977223966">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1184" height="248" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597089244722" />
-    <state width="1184" height="248" key="GridCell.Tab.0.left" timestamp="1597089244721">
+    <state width="1448" height="229" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607977223966" />
+    <state width="1448" height="229" key="GridCell.Tab.0.left" timestamp="1607977223965">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1184" height="248" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597089244721" />
-    <state width="1184" height="248" key="GridCell.Tab.0.right" timestamp="1597089244722">
+    <state width="1448" height="229" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607977223965" />
+    <state width="1448" height="229" key="GridCell.Tab.0.right" timestamp="1607977223966">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1184" height="248" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597089244722" />
+    <state width="1448" height="229" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607977223966" />
   </component>
   <component name="masterDetails">
     <states>
