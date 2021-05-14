@@ -6,8 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="flink-scala" />
-        <module name="flink-scala-examples" />
+        <module name="spark-scala-foreachbatch-kafka" />
       </profile>
     </annotationProcessing>
   </component>

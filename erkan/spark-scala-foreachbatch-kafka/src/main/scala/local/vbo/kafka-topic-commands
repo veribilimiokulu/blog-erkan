@@ -1,0 +1,57 @@
+[train@localhost ~]$ kafka-topics.sh --bootstrap-server 192.168.206.130:9092 \
+--create --topic input_topic \
+--partitions 3 --replication-factor 1
+
+
+[train@localhost ~]$ kafka-topics.sh --bootstrap-server 192.168.206.130:9092 \
+--create --topic normal \
+--partitions 3 --replication-factor 1
+
+
+[train@localhost ~]$ kafka-topics.sh --bootstrap-server 192.168.206.130:9092 \
+--create --topic outlier \
+--partitions 3 --replication-factor 1
+
+
+[train@localhost big_data]$ kafka-console-producer.sh \
+--bootstrap-server 192.168.206.130:9092 \
+--topic input_topic
+
+[train@localhost ~]$ kafka-console-consumer.sh \
+--bootstrap-server 192.168.206.130:9092 \
+--topic outlier
+
+
+
+[train@localhost ~]$ kafka-console-consumer.sh \
+--bootstrap-server 192.168.206.130:9092 \
+--topic normal
+
+
+
+
+
+[train@localhost big_data]$ kafka-console-producer.sh \
+--bootstrap-server 192.168.206.130:9092 \
+--topic input_topic
+
+>bu outlier girdisi,outlier
+>bu inlier,normal
+>bu outlier girdisi,outlier
+>bu inlier,normal
+>ikinci outlier,outlier
+>ikinci inlier,normal
+
+
+
+
+
+
+
+
+
+
+
+
+
+
