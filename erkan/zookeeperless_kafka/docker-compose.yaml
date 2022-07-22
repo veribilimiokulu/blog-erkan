@@ -7,6 +7,8 @@ services:
       context: .
     ports:
         - "9192:9192"
+    environment:
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka1:9092,LISTENER_DOCKER_EXTERNAL://${DOCKER_HOST_IP:-127.0.0.1}:9192
     volumes:
     - ./config/kafka1/server.properties:/kafka/config/server.properties
     - ./data/kafka1/:/data/kafka/
@@ -17,6 +19,8 @@ services:
       context: .
     ports:
         - "9292:9192"
+    environment:
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka2:9092,LISTENER_DOCKER_EXTERNAL://${DOCKER_HOST_IP:-127.0.0.1}:9292
     volumes:
     - ./config/kafka2/server.properties:/kafka/config/server.properties
     - ./data/kafka2/:/data/kafka/
@@ -27,6 +31,8 @@ services:
       context: .
     ports:
         - "9392:9192"
+    environment:
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka3:9092,LISTENER_DOCKER_EXTERNAL://${DOCKER_HOST_IP:-127.0.0.1}:9392
     volumes:
     - ./config/kafka3/server.properties:/kafka/config/server.properties
     - ./data/kafka3/:/data/kafka/
