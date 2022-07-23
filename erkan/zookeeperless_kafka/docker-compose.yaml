@@ -1,4 +1,9 @@
 version: "3.8"
+networks:
+  kafka-net:
+    ipam:
+      config:
+        - subnet: 172.18.0.0/16
 services:
   kafka1:
     container_name: kafka1
@@ -6,9 +11,10 @@ services:
     build: 
       context: .
     ports:
-        - "9192:9192"
-    environment:
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka1:9092,LISTENER_DOCKER_EXTERNAL://${DOCKER_HOST_IP:-127.0.0.1}:9192
+        - "9092:9092"
+    networks:
+      kafka-net:
+        ipv4_address: 172.18.0.11
     volumes:
     - ./config/kafka1/server.properties:/kafka/config/server.properties
     - ./data/kafka1/:/data/kafka/
@@ -18,9 +24,10 @@ services:
     build: 
       context: .
     ports:
-        - "9292:9192"
-    environment:
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka2:9092,LISTENER_DOCKER_EXTERNAL://${DOCKER_HOST_IP:-127.0.0.1}:9292
+        - "9292:9092"
+    networks:
+      kafka-net:
+        ipv4_address: 172.18.0.12
     volumes:
     - ./config/kafka2/server.properties:/kafka/config/server.properties
     - ./data/kafka2/:/data/kafka/
@@ -30,9 +37,10 @@ services:
     build: 
       context: .
     ports:
-        - "9392:9192"
-    environment:
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka3:9092,LISTENER_DOCKER_EXTERNAL://${DOCKER_HOST_IP:-127.0.0.1}:9392
+        - "9392:9092"
+    networks:
+      kafka-net:
+        ipv4_address: 172.18.0.13
     volumes:
     - ./config/kafka3/server.properties:/kafka/config/server.properties
     - ./data/kafka3/:/data/kafka/
