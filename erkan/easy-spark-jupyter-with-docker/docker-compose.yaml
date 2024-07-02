@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  spark:
+    image: spark:3.5.1
+    container_name: spark
+    deploy:
+        resources:
+            limits:
+              cpus: '2'
+              memory: "3g" 
+    ports:
+      - "4040:4040"
+      - "8888:8888"
+    networks:
+      - vbo
+    volumes:
+      - ./spark_v:/home/spark
+    command: sleep infinity
+
+networks:
+  vbo:
