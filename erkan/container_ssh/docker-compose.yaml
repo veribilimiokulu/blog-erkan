@@ -1,0 +1,32 @@
+version: '3.7'
+services:
+  jenkins:
+    restart: always
+    build: ./jenkins
+    image: jenkins_server
+    container_name: jenkins
+    ports:
+        - "8080:8080"
+        - "50000:50000"
+    volumes:
+      - jenkins_home:/var/jenkins_home
+      - "/var/run/docker.sock:/var/run/docker.sock"
+  prod_server:
+    build: ./prod
+    image: prod_server
+    container_name: prod_server
+    hostname: prod_server
+    privileged: true
+    ports:
+        - "8000:8000"
+        - "2222:22"
+    security_opt:
+      - seccomp:unconfined
+    tmpfs:
+      - /run
+      - /run/lock
+    volumes:
+        - ./prod/home/.ssh:/home/prod_user/.ssh
+        - /sys/fs/cgroup:/sys/fs/cgroup:ro
+volumes:
+  jenkins_home:
